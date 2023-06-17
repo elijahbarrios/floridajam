@@ -1,4 +1,8 @@
-button p, button a {
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+button p, button a, p.title {
   font-family: 'Schoolbell', serif;
   font-size: 24px;
   text-decoration: none;
@@ -57,7 +61,7 @@ button.is-cyan:hover, button.is-cyan:focus, button.is-cyan:active {
   }
 }
 
-.box {
+.box, .title {
   animation: fadeIn 2s;
 }
 
