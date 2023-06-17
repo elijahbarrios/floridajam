@@ -1,0 +1,73 @@
+button p, button a {
+  font-family: 'Schoolbell', serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+button {
+  animation: 1s ease 0s 1 fallDown;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+button:hover, button:focus, button:active {
+  -webkit-transform: scale(1.2) rotate(4deg);
+  transform: scale(1.2) rotate(4deg);
+}
+
+button.is-purple {
+  background-color: #ae93f7;
+  border-color: transparent;
+}
+button.is-purple:hover, button.is-purple:focus, button.is-purple:active {
+  border-color: transparent;
+}
+
+button.is-cyan {
+  background-color: #9bf6ff;
+  border-color: transparent;
+}
+
+button.is-cyan:hover, button.is-cyan:focus, button.is-cyan:active {
+  border-color: transparent;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.box {
+  animation: fadeIn 2s;
+}
+
+@media screen and (max-width: 768px) {
+  *, *:before, *:after {
+  /*CSS transitions*/
+  transition-property: none !important;
+  /*CSS transforms*/
+  transform: none !important;
+  /*CSS animations*/
+  animation: none !important;
+  }
+}
